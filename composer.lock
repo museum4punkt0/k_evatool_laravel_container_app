@@ -4914,7 +4914,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "e24e581c49c1ec3a3f4a1d18d5ee10db656903b0"
+                "reference": "54729aae04ef297f8d5b8785951a4218174b888f"
             },
             "require": {
                 "fakerphp/faker": "^1.15",
@@ -4924,7 +4924,7 @@
                 "illuminate/database": "^8.0",
                 "illuminate/pipeline": "^8.0",
                 "illuminate/support": "^8.0",
-                "php": "^7.4|^8.0",
+                "php": "^7.3|^8.0",
                 "spatie/laravel-fractal": "^5.8"
             },
             "require-dev": {
