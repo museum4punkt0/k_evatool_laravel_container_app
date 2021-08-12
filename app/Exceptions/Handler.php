@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Validation\ValidationException;
 use Throwable;
@@ -41,6 +42,11 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (ValidationException $e) {
             return response()->json($e->validator->errors()->getMessages(), 422);
+        });
+
+        $this->renderable(function (ModelNotFoundException $e) {
+            $modelName = strtolower(class_basename($e->getModel()));
+            return response()->json("No model of type " . $modelName . " found with the specified identifier", 404);
         });
     }
 }
