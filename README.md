@@ -13,7 +13,6 @@ sail up -d --build
 ./vendor/bin/sail up -d --build
 ```
 
-#### Install migrations
-```sh
-sail artisan vendor:publish --provider="Twoavy\EvaluationTool\EvaluationToolServiceProvider" --tag="migrations"
-```
+#### Migration
+* install migrations: `sail artisan vendor:publish --provider="Twoavy\EvaluationTool\EvaluationToolServiceProvider" --tag="migrations"`
+* migrate: `sail artisan migrate:fresh`
