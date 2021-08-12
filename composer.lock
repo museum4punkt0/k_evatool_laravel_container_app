@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a97ac8ff2d31ac73f9fe2149ffbc67a",
+    "content-hash": "ad0082e0f0e9203ee9bb16f6e5b034a2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5084,8 +5084,8 @@
             "version": "dev-develop",
             "dist": {
                 "type": "path",
-                "url": "./packages/evaluation-tool",
-                "reference": "d5f99db9f7f74fdb550115196531bb99d2ef6118"
+                "url": "./packages/twoavy/evaluation-tool",
+                "reference": "6bb872aff962c494765a999a3f3ef796a4989def"
             },
             "require": {
                 "illuminate/bus": "^8.0",

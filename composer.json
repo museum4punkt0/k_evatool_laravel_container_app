@@ -63,7 +63,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "./packages/evaluation-tool"
+            "url": "./packages/twoavy/evaluation-tool"
         }
     ]
 }
