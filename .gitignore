@@ -14,3 +14,4 @@ yarn-error.log
 /.idea
 /.vscode
 /packages/twoavy/evaluation-tool
+/packages/twoavy/evaluation-tool/.phpunit.result.cache
