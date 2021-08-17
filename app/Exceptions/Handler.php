@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Validation\ValidationException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -47,6 +48,10 @@ class Handler extends ExceptionHandler
         $this->renderable(function (ModelNotFoundException $e) {
             $modelName = strtolower(class_basename($e->getModel()));
             return response()->json("No model of type " . $modelName . " found with the specified identifier", 404);
+        });
+
+        $this->renderable(function (HttpException $e) {
+            return response()->json($e->getMessage(), $e->getStatusCode());
         });
     }
 }
