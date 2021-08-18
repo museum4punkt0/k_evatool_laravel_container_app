@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-// use Twoavy\EvaluationTool\Seeders\EvaluationToolSeeder;
+use Twoavy\EvaluationTool\Seeders\EvaluationToolSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            // EvaluationToolSeeder::class
+            EvaluationToolSeeder::class
         ]);
     }
 }
