@@ -18,10 +18,6 @@ sail up -d --build
 * migrate: `sail artisan migrate:fresh`
 
 #### Seeders
-* seed: `php artisan db:seed`
-
-##### Demo data
-TODO
-<!-- * install demo seeders: `sail artisan vendor:publish --provider="Twoavy\EvaluationTool\EvaluationToolServiceProvider" --tag="demo-seeders"` -->
-<!-- * seed: `php artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder` -->
+* seed: `sail artisan db:seed`
+* seed demo data: `sail artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder`
 
