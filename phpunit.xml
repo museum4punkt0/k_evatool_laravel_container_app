@@ -5,18 +5,18 @@
          colors="true"
 >
     <testsuites>
-        <testsuite name="Unit">
+        <!-- <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
-        </testsuite>
-        <testsuite name="Feature">
+        </testsuite> -->
+        <!-- <testsuite name="Feature">
             <directory suffix="Test.php">./tests/Feature</directory>
-        </testsuite>
+        </testsuite> -->
         <testsuite name="EvaluationToolFeature">
             <directory suffix="Test.php">./vendor/twoavy/evaluation-tool/tests/Feature</directory>
         </testsuite>
-        <testsuite name="EvaluationToolUnit">
+        <!-- <testsuite name="EvaluationToolUnit">
             <directory suffix="Test.php">./vendor/twoavy/evaluation-tool/tests/Unit</directory>
-        </testsuite>
+        </testsuite> -->
     </testsuites>
     <coverage processUncoveredFiles="true">
         <include>
