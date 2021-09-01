@@ -15,3 +15,4 @@ yarn-error.log
 /.vscode
 /packages/twoavy/evaluation-tool
 /packages/twoavy/evaluation-tool/.phpunit.result.cache
+/supervisord.log
