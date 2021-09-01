@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4246259840b7f216f5ba25118ac91d5",
+    "content-hash": "2c201d134b96642d913c3195ab6d4977",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -764,16 +764,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.57.0",
+            "version": "v8.58.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "6de01746680d7bc7e239b20ec5cdfe70ce586235"
+                "reference": "1b819bf99d87bd543a4d4895e5b3350f61ea7a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/6de01746680d7bc7e239b20ec5cdfe70ce586235",
-                "reference": "6de01746680d7bc7e239b20ec5cdfe70ce586235",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1b819bf99d87bd543a4d4895e5b3350f61ea7a23",
+                "reference": "1b819bf99d87bd543a4d4895e5b3350f61ea7a23",
                 "shasum": ""
             },
             "require": {
@@ -928,7 +928,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-08-27T13:34:11+00:00"
+            "time": "2021-08-31T13:55:57+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -4914,7 +4914,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "1e95f27f9ffe32fe69a0c639b34562c769fced15"
+                "reference": "e24e581c49c1ec3a3f4a1d18d5ee10db656903b0"
             },
             "require": {
                 "fakerphp/faker": "^1.15",
@@ -5560,16 +5560,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.10.1",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "267fafeaf0e0311952316ae0f3c765abc7516469"
+                "reference": "d1f703d73f782af5427697cdc5023395cd341963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/267fafeaf0e0311952316ae0f3c765abc7516469",
-                "reference": "267fafeaf0e0311952316ae0f3c765abc7516469",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/d1f703d73f782af5427697cdc5023395cd341963",
+                "reference": "d1f703d73f782af5427697cdc5023395cd341963",
                 "shasum": ""
             },
             "require": {
@@ -5616,7 +5616,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-08-23T13:43:27+00:00"
+            "time": "2021-05-25T16:41:13+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -6492,16 +6492,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.8",
+            "version": "9.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "191768ccd5c85513b4068bdbe99bb6390c7d54fb"
+                "reference": "ea8c2dfb1065eb35a79b3681eee6e6fb0a6f273b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/191768ccd5c85513b4068bdbe99bb6390c7d54fb",
-                "reference": "191768ccd5c85513b4068bdbe99bb6390c7d54fb",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ea8c2dfb1065eb35a79b3681eee6e6fb0a6f273b",
+                "reference": "ea8c2dfb1065eb35a79b3681eee6e6fb0a6f273b",
                 "shasum": ""
             },
             "require": {
@@ -6579,7 +6579,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.8"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.9"
             },
             "funding": [
                 {
@@ -6591,7 +6591,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-31T15:17:34+00:00"
+            "time": "2021-08-31T06:47:40+00:00"
         },
         {
             "name": "sebastian/cli-parser",
