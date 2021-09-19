@@ -37,6 +37,17 @@ class UsersController extends Controller
         $user = new User();
         $user->fill($request->all());
         $user->save();
-        return response()->json($user, 202);
+        return response()->json($user, 200);
+    }
+
+    /**
+     * @param UserStoreRequest $request
+     * @return JsonResponse
+     */
+    public function update(UserStoreRequest $request, User $user): JsonResponse
+    {
+        $user->fill($request->all());
+        $user->save();
+        return response()->json($user, 200);
     }
 }
