@@ -9,13 +9,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-json": "*",
         "fakerphp/faker": "^1.15",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "laravel/framework": "^8.40",
+        "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
-        "twoavy/evaluation-tool": "@dev",
-        "ext-json": "*"
+        "twoavy/evaluation-tool": "@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
