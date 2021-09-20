@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Artisan;
 use Twoavy\EvaluationTool\Seeders\EvaluationToolSeeder;
-use Twoavy\EvaluationTool\Seeders\EvaluationToolDemoDataSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,7 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            UserSeeder::class
+        ]);
+
+        $this->call([
              EvaluationToolSeeder::class
         ]);
+
+        Artisan::call('passport:install');
+
     }
 }
