@@ -21,3 +21,7 @@ sail up -d --build
 * seed: `sail artisan db:seed`
 * seed demo data: `sail artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder`
 
+#### Passport
+```
+sail artisan passport:install
+```
