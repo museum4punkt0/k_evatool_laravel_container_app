@@ -16,7 +16,8 @@
         "laravel/framework": "^8.40",
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
-        "twoavy/evaluation-tool": "@dev"
+        "twoavy/evaluation-tool": "@dev",
+        "ext-fileinfo": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

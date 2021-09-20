@@ -21,8 +21,15 @@ sail up -d --build
 * seed: `sail artisan db:seed`
 * seed demo data: `sail artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder`
 
+<<<<<<< HEAD
 #### Tests
 * run all tests: `sail artisan test`
 * run all tests in class: `sail artisan test --filter "EvaluationToolSurveyTest"`
 * run only one specific method: `sail artisan test --filter "EvaluationToolSurveyTest::test_get_surveys"`
 
+=======
+#### Passport
+```
+sail artisan passport:install
+```
+>>>>>>> 10f0eee39db6a69433743a256a1c1d31e1bc434e

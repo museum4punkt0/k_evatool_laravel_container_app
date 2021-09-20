@@ -16,3 +16,4 @@ yarn-error.log
 /packages/twoavy/evaluation-tool
 /packages/twoavy/evaluation-tool/.phpunit.result.cache
 /supervisord.log
+/.rnd

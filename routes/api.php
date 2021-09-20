@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\Users\UsersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,4 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('users/check-login', [UsersController::class, "checkLogin"]);
 Route::apiResource('users', UsersController::class);
+
+Route::get('app', [AppController::class, "getApp"]);
