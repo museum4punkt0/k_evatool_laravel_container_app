@@ -6528,7 +6528,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "5862a4a97d9d18b76649bb202db4f1a6d96bef8e"
+                "reference": "0de9654c88690e4ef4fab1a660afca66bef9ab84"
             },
             "require": {
                 "ankitpokhrel/tus-php": "^2.1",
@@ -6542,6 +6542,7 @@
                 "illuminate/support": "^8.0",
                 "james-heinrich/getid3": "^1.9",
                 "php": "^7.3|^8.0",
+                "ramsey/uuid": "^4.2",
                 "spatie/laravel-fractal": "^5.8"
             },
             "require-dev": {
