@@ -18,5 +18,5 @@ blocks:
             - git remote add staging $EVATOOL_STAGING_BACKEND_GIT_URL
             - git push -f staging develop
       secrets:
-        - name: EVA-Tool Staging
+        - name: eva_tool_staging
         - name: semaphore_evatool_staging
