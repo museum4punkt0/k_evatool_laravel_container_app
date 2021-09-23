@@ -2,8 +2,10 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
@@ -52,6 +54,10 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (HttpException $e) {
             return response()->json($e->getMessage(), $e->getStatusCode());
+        });
+
+        $this->renderable(function (AuthenticationException $e, Request $request) {
+            return $this->unauthenticated($request, $e);
         });
     }
 }
