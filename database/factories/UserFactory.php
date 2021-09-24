@@ -54,12 +54,10 @@ class UserFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'name'              => $this->faker->name(),
+                'name'              => env('ADMIN_NAME', 'Admin name'),
                 'email'             => env('ADMIN_EMAIL'),
-                'email_verified_at' => now(),
                 'password'          => env('ADMIN_PASSWORD'),
                 'admin'             => true,
-                'remember_token'    => Str::random(10),
             ];
         });
     }
