@@ -8,7 +8,8 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Throwable;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
 
 class Handler extends ExceptionHandler
 {
@@ -39,8 +40,23 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->renderable(function (AuthenticationException $e, Request $request) {
+            return $this->unauthenticated($request, $e);
+        });
+
+        $this->renderable(function (AuthenticationException $e) {
+            return response()->json(["message" => $e->getMessage()], 404);
+        });
+
+        $this->renderable(function (RouteNotFoundException $e) {
+            return response()->json(["message" => $e->getMessage()], 404);
+        });
+
+        $this->renderable(function (NotFoundHttpException $e, $request) {
+            if ($request->is('api/*')) {
+                return response()->json(["message" => "The specified URL cannot be found"], 404);
+            }
+            return response()->json(["message" => $e->getMessage()], $e->getStatusCode());
         });
 
         $this->renderable(function (ValidationException $e) {
@@ -54,10 +70,6 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (HttpException $e) {
             return response()->json($e->getMessage(), $e->getStatusCode());
-        });
-
-        $this->renderable(function (AuthenticationException $e, Request $request) {
-            return $this->unauthenticated($request, $e);
         });
     }
 }
