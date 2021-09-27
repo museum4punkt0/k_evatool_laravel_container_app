@@ -17,5 +17,9 @@ class UserSeeder extends Seeder
         if (env('ADMIN_EMAIL') && env('ADMIN_PASSWORD')) {
             UserFactory::times(1)->admin()->create();
         }
+
+        UserFactory::times(2)->create();
+        UserFactory::times(2)->unverified()->create();
+
     }
 }
