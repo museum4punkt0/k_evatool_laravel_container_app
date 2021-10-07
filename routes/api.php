@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('users/confirm-password', [UsersController::class, "confirmPassword"]);
-Route::get('users/check-login', [UsersController::class, "checkLogin"]);
+Route::middleware('auth:api')->get('users/check-login', [UsersController::class, "checkLogin"]);
 Route::post('users/{user}/invite', [UsersController::class, "inviteUser"]);
 Route::apiResource('users', UsersController::class);
 

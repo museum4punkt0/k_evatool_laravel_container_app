@@ -33,6 +33,7 @@ class InviteUser extends Mailable
     public function build(): InviteUser
     {
         return $this->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'))
+            ->subject('Einladung zum Evaluation Tool')
             ->with([
                 "activationUrl" => $this->activationUrl,
                 "token"         => $this->token->token,

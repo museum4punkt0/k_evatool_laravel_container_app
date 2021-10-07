@@ -56,11 +56,15 @@ class UsersController extends Controller
         return response()->json($user);
     }
 
-    public function checkLogin(Request $request)
+    public function checkLogin(Request $request): JsonResponse
     {
         if ($request->user()) {
-//            return response()->json($request->user());
+            $user             = User::find($request->user()->id);
+            $user->last_login = Carbon::now();
+            $user->save();
+            return response()->json($user);
         }
+        return response()->json("login error", 409);
     }
 
     public function inviteUser(User $user, Request $request): JsonResponse
