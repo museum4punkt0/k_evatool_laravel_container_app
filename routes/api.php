@@ -20,7 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('users/confirm-password', [UsersController::class, "confirmPassword"]);
 Route::get('users/check-login', [UsersController::class, "checkLogin"]);
+Route::post('users/{user}/invite', [UsersController::class, "inviteUser"]);
 Route::apiResource('users', UsersController::class);
 
 Route::get('app', [AppController::class, "getApp"]);

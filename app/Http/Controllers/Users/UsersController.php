@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserStoreRequest;
+use App\Mail\InviteUser;
 use App\Models\User;
-use http\Env\Response;
+use App\Models\UserToken;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class UsersController extends Controller
 {
@@ -55,10 +58,62 @@ class UsersController extends Controller
 
     public function checkLogin(Request $request)
     {
-
         if ($request->user()) {
-
 //            return response()->json($request->user());
         }
     }
+
+    public function inviteUser(User $user, Request $request): JsonResponse
+    {
+        if (!$request->has("confirm_url")) {
+            return response()->json('no confirm url provided', 409);
+        }
+
+        if ($tokens = UserToken::where("user_id", $user->id)->where("purpose", UserToken::TOKEN_PURPOSE_INVITE)->get()) {
+            foreach ($tokens as $token) {
+                $token->revoked_at = Carbon::now();
+                $token->save();
+            }
+        }
+
+        $token          = new UserToken();
+        $token->purpose = UserToken::TOKEN_PURPOSE_INVITE;
+        $token->user_id = $user->id;
+        $token->token   = UserToken::createToken();
+        $token->save();
+
+        Mail::to($user)->send(new InviteUser($token, $request->confirm_url, $user));
+
+        return response()->json($user);
+    }
+
+    public function confirmPassword(Request $request): JsonResponse
+    {
+        if (!$request->has("token")) {
+            return response()->json('no token provided', 409);
+        }
+
+        if (!$request->has("password")) {
+            return response()->json('no password provided', 409);
+        }
+
+        if (!$token = UserToken::where("token", $request->token)->whereNull("used_at")->first()) {
+            return response()->json('token invalid', 409);
+        }
+
+        if (!$user = User::find($token->user_id)) {
+            return response()->json('no user found', 409);
+        }
+
+        $user->password = $request->password;
+        $user->save();
+
+        $token->revoked_at = Carbon::now();
+        $token->used_at    = Carbon::now();
+        $token->save();
+
+        return response()->json($user);
+    }
+
+
 }
