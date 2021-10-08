@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Users;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;;
 use App\Http\Requests\UserStoreRequest;
 use App\Mail\InviteUser;
 use App\Models\User;
@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     /**
      * @return JsonResponse
@@ -88,6 +88,8 @@ class UsersController extends Controller
 
         Mail::to($user)->send(new InviteUser($token, $request->confirm_url, $user));
 
+        UserLogController::createLog($user->id, "invite sent");
+
         return response()->json($user);
     }
 
@@ -115,6 +117,8 @@ class UsersController extends Controller
         $token->revoked_at = Carbon::now();
         $token->used_at    = Carbon::now();
         $token->save();
+
+        UserLogController::createLog($user->id, "user password confirm");
 
         return response()->json($user);
     }
