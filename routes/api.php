@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppController;
-use App\Http\Controllers\Users\UsersController;
+use App\Http\Controllers\Users\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('users/check-login', [UsersController::class, "checkLogin"]);
-Route::apiResource('users', UsersController::class);
+Route::post('users/confirm-password', [UserController::class, "confirmPassword"]);
+Route::middleware('auth:api')->get('users/check-login', [UserController::class, "checkLogin"]);
+Route::post('users/{user}/invite', [UserController::class, "inviteUser"]);
+Route::apiResource('users', UserController::class);
 
 Route::get('app', [AppController::class, "getApp"]);
