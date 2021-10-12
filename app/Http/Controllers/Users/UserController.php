@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Users;
 
-use App\Http\Controllers\Controller;;
+use App\Http\Controllers\Controller;
+
+;
+
 use App\Http\Requests\UserStoreRequest;
 use App\Mail\InviteUser;
 use App\Models\User;
@@ -59,7 +62,9 @@ class UserController extends Controller
     public function checkLogin(Request $request): JsonResponse
     {
         if ($request->user()) {
-            $user             = User::find($request->user()->id);
+            if (!$user = User::find($request->user()->id)) {
+                return response()->json("user not found", 409);
+            }
             $user->last_login = Carbon::now();
             $user->save();
             return response()->json($user);
