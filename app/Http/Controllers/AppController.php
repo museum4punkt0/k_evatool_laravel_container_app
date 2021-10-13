@@ -10,10 +10,13 @@ class AppController extends Controller
 {
     public function getApp(): JsonResponse
     {
-        $app = [];
-        $client = Client::all()->where("password_client", true)->first()->only(["id","secret"]);
+        $app    = [];
+        $client = Client::all()->where("password_client", true)->first()->only(["id", "secret"]);
 
         $app["client"] = $client;
+
+        $packageVersion = json_decode(file_get_contents(base_path('packages/twoavy/evaluation-tool') . "/composer.json"));
+        $app["packageVersion"] = $packageVersion->version;
 
         return response()->json($app);
     }

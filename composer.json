@@ -1,5 +1,6 @@
 {
     "name": "laravel/laravel",
+    "version": "1.0.80",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
@@ -17,14 +18,16 @@
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
         "twoavy/evaluation-tool": "@dev",
-        "ext-fileinfo": "*"
+        "ext-fileinfo": "*",
+        "phlak/semver-cli": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
         "laravel/sail": "v1.7.0",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "brainmaestro/composer-git-hooks": "^2.8"
     },
     "autoload": {
         "psr-4": {
@@ -49,11 +52,21 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "cghooks": "vendor/bin/cghooks",
+        "semver": "vendor/bin/semver"
     },
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "hooks": {
+            "pre-commit": [
+                "echo committing as $(git config user.name)",
+                "./vendor/bin/semver increment:patch",
+                "git add ./composer.json",
+                "echo pre commit done"
+            ]
         }
     },
     "config": {
