@@ -16,11 +16,9 @@ sail up -d --build
 ```
 
 #### Migration with seed
-* install migrations: `sail artisan vendor:publish --provider="Twoavy\EvaluationTool\EvaluationToolServiceProvider" --tag="migrations"`
 * migrate: `sail artisan migrate:fresh --seed`
 
 #### Migration
-* install migrations: `sail artisan vendor:publish --provider="Twoavy\EvaluationTool\EvaluationToolServiceProvider" --tag="migrations"`
 * migrate: `sail artisan migrate:fresh`
 
 #### Run seeders
