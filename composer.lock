@@ -390,12 +390,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "81ad4e7e58270afbc38e5fbd26edb45b884a2bfa"
+                "reference": "f267b01852985da79d2f86f3d0610b8b66feb363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/81ad4e7e58270afbc38e5fbd26edb45b884a2bfa",
-                "reference": "81ad4e7e58270afbc38e5fbd26edb45b884a2bfa",
+                "url": "https://api.github.com/repos/composer/composer/zipball/f267b01852985da79d2f86f3d0610b8b66feb363",
+                "reference": "f267b01852985da79d2f86f3d0610b8b66feb363",
                 "shasum": ""
             },
             "require": {
@@ -481,7 +481,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-25T12:16:20+00:00"
+            "time": "2021-10-25T19:42:03+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -8134,11 +8134,11 @@
         },
         {
             "name": "twoavy/evaluation-tool",
-            "version": "1.0.233",
+            "version": "1.0.243",
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "2a3c765ef774e747bf5df2c16f77a47cc4d52c03"
+                "reference": "06c9f97976ff75d19dc509ff85cf8e8eb1b52133"
             },
             "require": {
                 "ankitpokhrel/tus-php": "^2.1",
