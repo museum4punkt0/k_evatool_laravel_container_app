@@ -390,12 +390,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "f267b01852985da79d2f86f3d0610b8b66feb363"
+                "reference": "3645d3042c1ee531deda178cbcc5b3fe9ee0181b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/f267b01852985da79d2f86f3d0610b8b66feb363",
-                "reference": "f267b01852985da79d2f86f3d0610b8b66feb363",
+                "url": "https://api.github.com/repos/composer/composer/zipball/3645d3042c1ee531deda178cbcc5b3fe9ee0181b",
+                "reference": "3645d3042c1ee531deda178cbcc5b3fe9ee0181b",
                 "shasum": ""
             },
             "require": {
@@ -481,7 +481,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-25T19:42:03+00:00"
+            "time": "2021-10-26T10:40:52+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -2081,16 +2081,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.67.0",
+            "version": "v8.68.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "fc52acafd069aedc079bf8f17d1a4af4ef489b1e"
+                "reference": "08781be9c1e3f83b0c38ce9539e1dc4664e33a14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/fc52acafd069aedc079bf8f17d1a4af4ef489b1e",
-                "reference": "fc52acafd069aedc079bf8f17d1a4af4ef489b1e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/08781be9c1e3f83b0c38ce9539e1dc4664e33a14",
+                "reference": "08781be9c1e3f83b0c38ce9539e1dc4664e33a14",
                 "shasum": ""
             },
             "require": {
@@ -2182,6 +2182,7 @@
                 "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.198.1).",
                 "brianium/paratest": "Required to run tests in parallel (^6.0).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.13.3|^3.1.2).",
+                "ext-bcmath": "Required to use the multiple_of validation rule.",
                 "ext-ftp": "Required to use the Flysystem FTP driver.",
                 "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
                 "ext-memcached": "Required to use the memcache cache driver.",
@@ -2248,7 +2249,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-10-22T13:27:12+00:00"
+            "time": "2021-10-26T12:52:38+00:00"
         },
         {
             "name": "laravel/passport",
@@ -8134,11 +8135,11 @@
         },
         {
             "name": "twoavy/evaluation-tool",
-            "version": "1.0.243",
+            "version": "1.0.244",
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "06c9f97976ff75d19dc509ff85cf8e8eb1b52133"
+                "reference": "c951db40137262289646da8b55b14b59a2e17354"
             },
             "require": {
                 "ankitpokhrel/tus-php": "^2.1",
