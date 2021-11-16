@@ -24,6 +24,7 @@ sail up -d --build
 #### Run seeders
 * seed: `sail artisan db:seed`
 * seed demo data: `sail artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder`
+* seed demo survey results: `sail artisan evaluation:seed_survey_results SURVEYID COUNT`
 
 #### Passport installation
 ```
