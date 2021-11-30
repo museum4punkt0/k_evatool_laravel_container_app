@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use ReflectionClass;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
@@ -44,28 +45,24 @@ class Handler extends ExceptionHandler
             return $this->unauthenticated($request, $e);
         });
 
-        $this->renderable(function (AuthenticationException $e) {
-            return response()->json(["message" => $e->getMessage()], 404);
-        });
-
         $this->renderable(function (RouteNotFoundException $e) {
             return response()->json(["message" => $e->getMessage()], 404);
         });
 
-        $this->renderable(function (NotFoundHttpException $e, $request) {
-            if ($request->is('api/*')) {
-                return response()->json(["message" => "The specified URL cannot be found"], 404);
+        $this->renderable(function (NotFoundHttpException $e) {
+            if ($e->getPrevious()) {
+                $reflect = new ReflectionClass($e->getPrevious());
+                if ($reflect->getShortName() === 'ModelNotFoundException') {
+                    $modelName = class_basename($e->getPrevious()->getModel());
+                    return response()->json(["message" => "No model of type '" . $modelName . "'"], $e->getStatusCode());
+                }
             }
+
             return response()->json(["message" => $e->getMessage()], $e->getStatusCode());
         });
 
         $this->renderable(function (ValidationException $e) {
             return response()->json($e->validator->errors()->getMessages(), 422);
-        });
-
-        $this->renderable(function (ModelNotFoundException $e) {
-            $modelName = strtolower(class_basename($e->getModel()));
-            return response()->json("No model of type " . $modelName . " found with the specified identifier", 404);
         });
 
         $this->renderable(function (HttpException $e) {
