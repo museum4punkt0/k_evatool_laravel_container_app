@@ -18,3 +18,4 @@ yarn-error.log
 /supervisord.log
 /.rnd
 /public/evaluation-tool
+/local_scripts/
