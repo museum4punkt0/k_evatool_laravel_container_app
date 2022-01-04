@@ -19,3 +19,4 @@ yarn-error.log
 /.rnd
 /public/evaluation-tool
 /local_scripts/
+/database/snapshots/

@@ -20,6 +20,7 @@
         "laravel/scout": "^9.3",
         "laravel/tinker": "^2.5",
         "phlak/semver-cli": "^1.0",
+        "spatie/laravel-db-snapshots": "^2.2",
         "twoavy/evaluation-tool": "@dev"
     },
     "require-dev": {
