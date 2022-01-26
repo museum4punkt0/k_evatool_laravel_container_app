@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d22648c58e5f003d96d3122fa8063ae",
+    "content-hash": "8d52d9d6e8940bcd64508256cb7c0c59",
     "packages": [
         {
             "name": "ankitpokhrel/tus-php",
@@ -9421,11 +9421,11 @@
         },
         {
             "name": "twoavy/evaluation-tool",
-            "version": "1.0.365",
+            "version": "1.0.366",
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "497b26d216aa26132ad6db41b7298e76d6607e7b"
+                "reference": "11dc20238c97e0b099c288e807ad34b2d9716852"
             },
             "require": {
                 "ankitpokhrel/tus-php": "^2.1",
