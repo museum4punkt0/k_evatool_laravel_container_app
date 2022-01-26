@@ -18,5 +18,7 @@ yarn-error.log
 /supervisord.log
 /.rnd
 /public/evaluation-tool
+/public/evaluation-tool-audio
 /local_scripts/
 /database/snapshots/
+/speechmatics/

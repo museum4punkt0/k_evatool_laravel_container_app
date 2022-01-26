@@ -1,6 +1,6 @@
 {
     "name": "laravel/laravel",
-    "version": "1.0.80",
+    "version": "1.0.81",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
@@ -21,7 +21,8 @@
         "laravel/tinker": "^2.5",
         "phlak/semver-cli": "^1.0",
         "spatie/laravel-db-snapshots": "^1.7.1",
-        "twoavy/evaluation-tool": "@dev"
+        "twoavy/evaluation-tool": "@dev",
+        "ext-curl": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

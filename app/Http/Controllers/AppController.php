@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Mail;
 use Laravel\Passport\Client;
@@ -15,8 +16,12 @@ class AppController extends Controller
 
         $app["client"] = $client;
 
-        $packageVersion = json_decode(file_get_contents(base_path('packages/twoavy/evaluation-tool') . "/composer.json"));
+        $packageVersion        = json_decode(file_get_contents(base_path('packages/twoavy/evaluation-tool') . "/composer.json"));
         $app["packageVersion"] = $packageVersion->version;
+
+        if (env('SPEECH_TO_TEXT_SERVICE', false)) {
+            $app["speechToTextServiceEnabled"] = true;
+        }
 
         return response()->json($app);
     }
