@@ -1,6 +1,6 @@
 {
     "name": "laravel/laravel",
-    "version": "1.0.84",
+    "version": "1.0.85",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
@@ -26,7 +26,7 @@
     },
     "require-dev": {
         "facade/ignition": "^2.5",
-        "laravel/sail": "v1.7.0",
+        "laravel/sail": "v1.13.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3.3",
