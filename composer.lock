@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16e3a2c5d27e9ab15493d1414edb5857",
+    "content-hash": "3c424a0bec75af3010e07364bc570197",
     "packages": [
         {
             "name": "ankitpokhrel/tus-php",
@@ -387,16 +387,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.2.5",
+            "version": "2.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "22c41ef275c7bb64fa28fb2c0871a39666832cb9"
+                "reference": "ce785a18c0fb472421e52d958bab339247cb0e82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/22c41ef275c7bb64fa28fb2c0871a39666832cb9",
-                "reference": "22c41ef275c7bb64fa28fb2c0871a39666832cb9",
+                "url": "https://api.github.com/repos/composer/composer/zipball/ce785a18c0fb472421e52d958bab339247cb0e82",
+                "reference": "ce785a18c0fb472421e52d958bab339247cb0e82",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.2.5"
+                "source": "https://github.com/composer/composer/tree/2.2.6"
             },
             "funding": [
                 {
@@ -482,7 +482,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-21T16:25:52+00:00"
+            "time": "2022-02-04T16:00:38+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -626,16 +626,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.2.8",
+            "version": "3.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "3976a9e563da06e8dd8ca856fa2adcd66cdd98f3"
+                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/3976a9e563da06e8dd8ca856fa2adcd66cdd98f3",
-                "reference": "3976a9e563da06e8dd8ca856fa2adcd66cdd98f3",
+                "url": "https://api.github.com/repos/composer/semver/zipball/a951f614bd64dcd26137bc9b7b2637ddcfc57649",
+                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649",
                 "shasum": ""
             },
             "require": {
@@ -687,7 +687,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.2.8"
+                "source": "https://github.com/composer/semver/tree/3.2.9"
             },
             "funding": [
                 {
@@ -703,7 +703,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-04T12:12:24+00:00"
+            "time": "2022-02-04T13:58:43+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -2791,16 +2791,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.82.0",
+            "version": "v8.83.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "411d5243c58cbf12b0fc89cab1ceb50088968c27"
+                "reference": "29bc8779103909ebc428478b339ee6fa8703e193"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/411d5243c58cbf12b0fc89cab1ceb50088968c27",
-                "reference": "411d5243c58cbf12b0fc89cab1ceb50088968c27",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/29bc8779103909ebc428478b339ee6fa8703e193",
+                "reference": "29bc8779103909ebc428478b339ee6fa8703e193",
                 "shasum": ""
             },
             "require": {
@@ -2960,7 +2960,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-02-01T16:13:57+00:00"
+            "time": "2022-02-08T15:44:51+00:00"
         },
         {
             "name": "laravel/passport",
@@ -3041,16 +3041,16 @@
         },
         {
             "name": "laravel/scout",
-            "version": "v9.4.2",
+            "version": "v9.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "ef196f08c326e92f1793cc4deaaaf5a14f94d926"
+                "reference": "d3905336dd086203eafd8ab8a12ddf3ccfd1d97a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/ef196f08c326e92f1793cc4deaaaf5a14f94d926",
-                "reference": "ef196f08c326e92f1793cc4deaaaf5a14f94d926",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/d3905336dd086203eafd8ab8a12ddf3ccfd1d97a",
+                "reference": "d3905336dd086203eafd8ab8a12ddf3ccfd1d97a",
                 "shasum": ""
             },
             "require": {
@@ -3059,7 +3059,7 @@
                 "illuminate/database": "^8.0|^9.0",
                 "illuminate/http": "^8.0|^9.0",
                 "illuminate/pagination": "^8.0|^9.0",
-                "illuminate/queue": "^8.|^9.0",
+                "illuminate/queue": "^8.0|^9.0",
                 "illuminate/support": "^8.0|^9.0",
                 "php": "^7.3|^8.0"
             },
@@ -3109,7 +3109,7 @@
                 "issues": "https://github.com/laravel/scout/issues",
                 "source": "https://github.com/laravel/scout"
             },
-            "time": "2022-01-18T18:10:20+00:00"
+            "time": "2022-02-08T19:30:30+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -7998,12 +7998,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Iconv\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Iconv\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8078,12 +8078,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8161,12 +8161,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8246,12 +8246,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -8410,12 +8410,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8486,12 +8486,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -8565,12 +8565,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -8648,12 +8648,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php81\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php81\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -9423,11 +9423,11 @@
         },
         {
             "name": "twoavy/evaluation-tool",
-            "version": "1.0.376",
+            "version": "1.0.379",
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "df89c1594280a3fdc447c516691745b0f6d1a3a9"
+                "reference": "c9543d2902f78d47172502c2c36bb9e7f935d444"
             },
             "require": {
                 "ankitpokhrel/tus-php": "^2.1",
@@ -9971,12 +9971,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Facade\\Ignition\\": "src"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "Facade\\Ignition\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -10322,9 +10322,6 @@
             "require": {
                 "php": "^7.1 || ^8.0"
             },
-            "replace": {
-                "myclabs/deep-copy": "self.version"
-            },
             "require-dev": {
                 "doctrine/collections": "^1.0",
                 "doctrine/common": "^2.6",
@@ -10512,16 +10509,16 @@
         },
         {
             "name": "phar-io/version",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/version.git",
-                "reference": "bae7c545bef187884426f042434e561ab1ddb182"
+                "reference": "15a90844ad40f127afd244c0cad228de2a80052a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/version/zipball/bae7c545bef187884426f042434e561ab1ddb182",
-                "reference": "bae7c545bef187884426f042434e561ab1ddb182",
+                "url": "https://api.github.com/repos/phar-io/version/zipball/15a90844ad40f127afd244c0cad228de2a80052a",
+                "reference": "15a90844ad40f127afd244c0cad228de2a80052a",
                 "shasum": ""
             },
             "require": {
@@ -10557,9 +10554,9 @@
             "description": "Library for handling version information and constraints",
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
-                "source": "https://github.com/phar-io/version/tree/3.1.0"
+                "source": "https://github.com/phar-io/version/tree/3.1.1"
             },
-            "time": "2021-02-23T14:00:09+00:00"
+            "time": "2022-02-07T21:56:48+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -11168,11 +11165,11 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "src/"
-                ],
                 "files": [
                     "src/Framework/Assert/Functions.php"
+                ],
+                "classmap": [
+                    "src/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -11715,16 +11712,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "5.0.3",
+            "version": "5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49"
+                "reference": "19c519631c5a511b7ed0ad64a6713fdb3fd25fe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/23bd5951f7ff26f12d4e3242864df3e08dec4e49",
-                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/19c519631c5a511b7ed0ad64a6713fdb3fd25fe4",
+                "reference": "19c519631c5a511b7ed0ad64a6713fdb3fd25fe4",
                 "shasum": ""
             },
             "require": {
@@ -11767,7 +11764,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/global-state/issues",
-                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.3"
+                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.4"
             },
             "funding": [
                 {
@@ -11775,7 +11772,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-11T13:31:12+00:00"
+            "time": "2022-02-10T07:01:19+00:00"
         },
         {
             "name": "sebastian/lines-of-code",
@@ -12238,5 +12235,5 @@
         "ext-curl": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
