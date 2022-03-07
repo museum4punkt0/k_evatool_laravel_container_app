@@ -1,3 +1,13 @@
+## Production
+#### Install
+
+Run this in project directory
+```
+php composer.phar install
+php artisan migrate
+php artisan passport:install
+```
+
 ## Local development
 
 #### Install & update
