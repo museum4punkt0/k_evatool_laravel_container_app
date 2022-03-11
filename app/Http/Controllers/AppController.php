@@ -2,15 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Mail;
 use Laravel\Passport\Client;
+use Twoavy\EvaluationTool\Models\EvaluationToolSurveyLanguage;
 
 class AppController extends Controller
 {
     public function getApp(): JsonResponse
     {
+        // check for clients
+        if (!Client::all()->where("password_client", true)->first()) {
+            return response()->json(["message" => "no oauth clients present. please create one", "status" => "warning"]);
+        }
+
+        // check for languages
+        if (EvaluationToolSurveyLanguage::all()->count() === 0) {
+            return response()->json(["message" => "no languages present. please create one", "status" => "warning"]);
+        }
+
+        // check for users
+        if (User::where("admin", true)->count() === 0) {
+            return response()->json(["message" => "no admin users present. please create one", "status" => "warning"]);
+        }
+
         $app    = [];
         $client = Client::all()->where("password_client", true)->first()->only(["id", "secret"]);
 
@@ -22,8 +39,8 @@ class AppController extends Controller
         if (env('SPEECH_TO_TEXT_SERVICE', false)) {
             $app["speechToTextServiceEnabled"] = true;
         }
-
         return response()->json($app);
+
     }
 
     public static function sendTestMail()
