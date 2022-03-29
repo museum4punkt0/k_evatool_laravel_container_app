@@ -1,6 +1,6 @@
 {
     "name": "laravel/laravel",
-    "version": "1.0.90",
+    "version": "1.0.91",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
@@ -10,8 +10,10 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-curl": "*",
         "ext-fileinfo": "*",
         "ext-json": "*",
+        "doctrine/dbal": "^3.3",
         "fakerphp/faker": "^1.15",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -21,8 +23,7 @@
         "laravel/tinker": "^2.5",
         "phlak/semver-cli": "^1.0",
         "spatie/laravel-db-snapshots": "^1.7.1",
-        "twoavy/evaluation-tool": "@dev",
-        "ext-curl": "*"
+        "twoavy/evaluation-tool": "@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
