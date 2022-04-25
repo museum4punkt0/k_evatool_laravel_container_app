@@ -8,6 +8,14 @@ php artisan migrate
 php artisan passport:install
 ```
 
+#### Symlinks needed
+Create the following symlinks for proper file paths. Run these commands on public folder
+```
+ln -s ../storage/app/evaluation-tool/assets evaluation-tool
+ln -s ../storage/app/evaluation-tool/audio evaluation-tool-audio
+ln -s ../storage/app/evaluation-tool/settings_assets evaluation-tool-settings-assets
+```
+
 ## Local development
 
 #### Install & update

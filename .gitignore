@@ -22,3 +22,4 @@ yarn-error.log
 /local_scripts/
 /database/snapshots/
 /speechmatics/
+/public/evaluation-tool-settings-assets/
