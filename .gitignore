@@ -19,7 +19,7 @@ yarn-error.log
 /.rnd
 /public/evaluation-tool
 /public/evaluation-tool-audio
+/public/evaluation-tool-settings-assets
 /local_scripts/
 /database/snapshots/
 /speechmatics/
-/public/evaluation-tool-settings-assets/
