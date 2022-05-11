@@ -55,7 +55,6 @@ class UserFactory extends Factory
                 'name'              => env('ADMIN_NAME', 'Admin name'),
                 'email'             => env('ADMIN_EMAIL'),
                 'password'          => env('ADMIN_PASSWORD'),
-                'admin'             => true,
             ];
         });
     }

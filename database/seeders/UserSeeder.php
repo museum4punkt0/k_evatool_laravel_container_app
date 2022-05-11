@@ -15,7 +15,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         if (env('ADMIN_EMAIL') && env('ADMIN_PASSWORD')) {
-            UserFactory::times(1)->admin()->create();
+            $user = UserFactory::times(1)->admin()->create();
+            $user->first()->attachRoles(["admin"]);
         }
 
         UserFactory::times(2)->create();
