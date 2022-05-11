@@ -12,6 +12,7 @@ use App\Models\Role;
 class RoleController extends Controller
 {
     /**
+     * Returns all Laratrust Roles
      * @return JsonResponse
      */
     public function index(): JsonResponse
@@ -26,6 +27,7 @@ class RoleController extends Controller
     }
 
     /**
+     * Returns single Role based on request
      * @param Role $role
      * @return JsonResponse
      */
@@ -35,7 +37,7 @@ class RoleController extends Controller
     }
 
     /**
-     * Stores a survey record
+     * Stores a new Role
      *
      * @param RoleStoreRequest $request
      * @return JsonResponse
@@ -47,14 +49,5 @@ class RoleController extends Controller
         $role->save();
 
         return response()->json($role);
-    }
-
-    public function getRolesForRequestingUser(User $user): JsonResponse
-    {
-        $roles = Role::where('power', '<=', $user->roles->power);
-        $roles->transform(function ($role) {
-            return (new RoleTransformer())->transform($role);
-        });
-        return response()->json($roles);
     }
 }
