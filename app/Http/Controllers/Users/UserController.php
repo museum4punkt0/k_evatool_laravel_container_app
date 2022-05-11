@@ -14,6 +14,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
+use function DI\get;
 
 class UserController extends Controller
 {
@@ -23,6 +24,9 @@ class UserController extends Controller
     public function index(): JsonResponse
     {
         $users = User::all();
+        $users->transform(function ($user) {
+            return $user->setAttribute('role', $user->getRoles());
+        });
         return response()->json($users);
     }
 
@@ -44,6 +48,7 @@ class UserController extends Controller
         $user = new User();
         $user->fill($request->all());
         $user->save();
+        $user->attachRole($request->role);
         return response()->json($user);
     }
 
@@ -59,6 +64,19 @@ class UserController extends Controller
         return response()->json($user);
     }
 
+    public function delete(User $user, User $userToDelete): JsonResponse
+    {
+        if (!$user->hasPermission('deleteUser')) {
+            abort('you are not allowed to do that');
+        }
+        $userToDelete->delete();
+        $users = User::all();
+        $users->transform(function ($user) {
+            return $user->setAttribute('role', $user->getRoles());
+        });
+        return response()->json($users);
+    }
+
     public function checkLogin(Request $request): JsonResponse
     {
         if ($request->user()) {
@@ -67,6 +85,7 @@ class UserController extends Controller
             }
             $user->last_login = Carbon::now();
             $user->save();
+            $user->setAttribute('role', $user->getRoles());
             return response()->json($user);
         }
         return response()->json("login error", 409);
@@ -128,5 +147,13 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-
+    public function checkIfUserHasFittingRole(Request $request): JsonResponse
+    {
+        if ($request->has('userid') && $request->has('role')) {
+            $user = User::where('id', $request->userid)->first();
+            $hasRole = $user->hasRole($request->role);
+            return response()->json(array('hasRole' => $hasRole), $hasRole ? 200 : 400);
+        }
+        return response()->json(array("success" => 'false'));
+    }
 }

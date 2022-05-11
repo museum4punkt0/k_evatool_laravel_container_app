@@ -6,10 +6,13 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use Laravel\Passport\HasApiTokens;
+use Laratrust\Traits\LaratrustUserTrait;
 
 class User extends Authenticatable
 {
+    use LaratrustUserTrait;
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -21,7 +24,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'admin'
     ];
 
     /**
@@ -41,11 +43,13 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'admin'             => 'boolean'
     ];
 
     public function setPasswordAttribute($value)
     {
+        if ($value == null) {
+            $value = Str::random(16);
+        }
         $this->attributes['password'] = password_hash($value, PASSWORD_BCRYPT);
     }
 }

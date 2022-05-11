@@ -24,7 +24,7 @@ class AppController extends Controller
         }
 
         // check for users
-        if (User::where("admin", true)->count() === 0) {
+        if (User::whereRoleIs('admin')->count() === 0) {
             return response()->json(["message" => "no admin users present. please create one", "status" => "warning"]);
         }
 
