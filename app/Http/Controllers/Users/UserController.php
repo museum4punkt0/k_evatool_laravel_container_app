@@ -64,6 +64,13 @@ class UserController extends Controller
         return response()->json($user);
     }
 
+    /**
+     * Deletes User based on id, checked with
+     * Returns all remaining users
+     * @param User $user
+     * @param User $userToDelete
+     * @return JsonResponse
+     */
     public function delete(User $user, User $userToDelete): JsonResponse
     {
         if (!$user->hasPermission('deleteUser')) {
@@ -77,6 +84,13 @@ class UserController extends Controller
         return response()->json($users);
     }
 
+    /**
+     * Returns user based on id, returns user data and role
+     * Saves last login time
+     *
+     * @param Request $request
+     * @return JsonResponse
+     */
     public function checkLogin(Request $request): JsonResponse
     {
         if ($request->user()) {
@@ -147,6 +161,11 @@ class UserController extends Controller
         return response()->json($user);
     }
 
+    /**
+     * Checks if user matches permissions required for specific action
+     * @param Request $request
+     * @return JsonResponse
+     */
     public function checkIfUserHasFittingRole(Request $request): JsonResponse
     {
         if ($request->has('userid') && $request->has('role')) {

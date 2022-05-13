@@ -11,6 +11,7 @@ use Illuminate\Http\JsonResponse;
 class PermissionController extends Controller
 {
     /**
+     * Returns all available Laratrust permissions
      * @return JsonResponse
      */
     public function index(): JsonResponse
@@ -23,6 +24,7 @@ class PermissionController extends Controller
     }
 
     /**
+     * Returns single permission based on request
      * @param Permission $permissions
      * @return JsonResponse
      */
@@ -32,7 +34,7 @@ class PermissionController extends Controller
     }
 
     /**
-     * Stores a survey record
+     * Stores a new permission
      *
      * @param PermissionStoreRequest $request
      * @return JsonResponse
