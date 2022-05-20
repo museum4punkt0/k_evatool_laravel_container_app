@@ -1,7 +1,18 @@
 # k:evatool laravel container app
 ## Production
-#### Install
 
+### Recommended Server Setup
+#### Backend (Laravel)
+- Ubuntu 20.04
+- Apache 2.4.x (nginx can be used as well)
+- PHP 8.0
+- MySQL 8.0
+- Composer 2.x
+
+#### Prerequisites
+A MySQL database must be installed and configured. The credentials must be inserted in the .env file.
+
+#### Install
 Run this in project directory
 ```
 php composer.phar install
@@ -23,7 +34,7 @@ ln -s ../storage/app/evaluation-tool/settings_assets evaluation-tool-settings-as
 ```sh
 mkdir ./packages
 mkdir ./packages/twoavy
-git clone git@github.com:twoavy/evaluation-tool.git
+git clone git@github.com:museum4punkt0/k_evatool_laravel_package.git
 
 composer install
 sail up -d --build
