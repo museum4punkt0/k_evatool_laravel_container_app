@@ -5,7 +5,7 @@
 #### Backend (Laravel)
 - Ubuntu 20.04
 - Apache 2.4.x (nginx can be used as well)
-- PHP 8.0
+- PHP 8.0 (Several addition php packages are needed. Please see https://laravel.com/docs/8.x/deployment)
 - MySQL 8.0
 - Composer 2.x
 
