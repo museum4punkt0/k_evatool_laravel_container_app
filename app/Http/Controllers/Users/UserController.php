@@ -61,6 +61,8 @@ class UserController extends Controller
     {
         $user->fill($request->all());
         $user->save();
+        $user->detachRoles($user->roles);
+        $user->attachRole($request->role);
         return response()->json($user);
     }
 
