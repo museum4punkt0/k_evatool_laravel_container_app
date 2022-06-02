@@ -86,3 +86,8 @@ sail artisan passport:install
 * run all tests: `sail artisan test`
 * run all tests in class: `sail artisan test --filter "EvaluationToolSurveyTest"`
 * run only one specific method: `sail artisan test --filter "EvaluationToolSurveyTest::test_get_surveys"`
+
+### License
+GNU GENERAL PUBLIC LICENSE <br>
+Copyright © 2022, 2av GmbH <br>
+Please also see the LICENSE file provided within this repository
