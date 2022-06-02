@@ -13,11 +13,20 @@
 A MySQL database must be installed and configured. The credentials must be inserted in the .env file.
 
 #### Install
-Run this in project directory
+Run this in project directory on initial install
 ```
 php composer.phar install
+php artisan storage:link
 php artisan migrate
 php artisan passport:install
+```
+
+#### Updates
+Run this in project directory after each update
+```
+php composer.phar install
+php artisan storage:link
+php artisan migrate
 ```
 
 #### Symlinks needed
