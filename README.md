@@ -12,6 +12,8 @@
 #### Prerequisites
 A MySQL database must be installed and configured. The credentials must be inserted in the .env file.
 
+**IMPORTANT:** Please clone https://github.com/museum4punkt0/k_evatool_laravel_package into the "packages/twoavy" directory. Otherwise installation would fail.
+
 #### Install
 Run this in project directory on initial install
 ```
