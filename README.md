@@ -10,7 +10,10 @@
 - Composer 2.x
 
 #### Prerequisites
-A MySQL database must be installed and configured. The credentials must be inserted in the .env file.
+A MySQL database must be installed and configured. Configuration also includes the creation of a database with the necessary access writes so that PHP can
+access it. The
+credentials must be inserted in the .env
+file.
 
 **IMPORTANT:** Please clone https://github.com/museum4punkt0/k_evatool_laravel_package into the "packages/twoavy" directory. Otherwise installation would fail.
 
