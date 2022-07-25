@@ -60,8 +60,7 @@ ln -s ../storage/app/evaluation-tool/settings_assets evaluation-tool-settings-as
 ```sh
 cp .env.example .env
 mkdir -p ./packages/twoavy/evaluation-tool
-cd packages/twoavy
-git clone git@github.com-twoavy-ms:museum4punkt0/k_evatool_laravel_package.git ./packages/twoavy/evaluation-tool
+git clone git@github.com:museum4punkt0/k_evatool_laravel_package.git ./packages/twoavy/evaluation-tool
 git -C ./packages/twoavy/evaluation-tool checkout master
 docker-compose build
 docker-compose up -d
