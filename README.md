@@ -72,21 +72,16 @@ docker-compose exec k_evatool php artisan users:create-admin
 
 Alternatively you can use the Makefile and run "make magic"
 
-#### If simple "sail" does not work
-```
-./vendor/bin/sail up -d --build
-```
-
 #### Migration with seed
-* migrate: `sail artisan migrate:fresh --seed`
+* migrate: `docker-compose exec k_evatool artisan migrate:fresh --seed`
 
 #### Migration
-* migrate: `sail artisan migrate:fresh`
+* migrate: `docker-compose exec k_evatool artisan migrate:fresh`
 
 #### Run seeders
-* seed: `sail artisan db:seed`
-* seed demo data: `sail artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder`
-* seed demo survey results: `sail artisan evaluation:seed_survey_results SURVEYID COUNT`
+* seed: `docker-compose exec k_evatool artisan db:seed`
+* seed demo data: `docker-compose exec k_evatool artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder`
+* seed demo survey results: `docker-compose exec k_evatool artisan evaluation:seed_survey_results SURVEYID COUNT`
 
 #### Passport installation
 ```
@@ -94,9 +89,9 @@ sail artisan passport:install
 ```
 
 #### Tests
-* run all tests: `sail artisan test`
-* run all tests in class: `sail artisan test --filter "EvaluationToolSurveyTest"`
-* run only one specific method: `sail artisan test --filter "EvaluationToolSurveyTest::test_get_surveys"`
+* run all tests: `docker-compose exec k_evatool artisan test`
+* run all tests in class: `docker-compose exec k_evatool artisan test --filter "EvaluationToolSurveyTest"`
+* run only one specific method: `docker-compose exec k_evatool artisan test --filter "EvaluationToolSurveyTest::test_get_surveys"`
 
 ### License
 GNU GENERAL PUBLIC LICENSE <br>
