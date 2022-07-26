@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b436eeb041073472527fa34904222d8e",
+    "content-hash": "062973bac36c62c8fa11711f6f1172be",
     "packages": [
         {
             "name": "ankitpokhrel/tus-php",
@@ -2396,16 +2396,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.21.3",
+            "version": "v3.21.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "e2497c2576556469963852216d886050e0606d8b"
+                "reference": "f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/e2497c2576556469963852216d886050e0606d8b",
-                "reference": "e2497c2576556469963852216d886050e0606d8b",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5",
+                "reference": "f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5",
                 "shasum": ""
             },
             "require": {
@@ -2435,9 +2435,9 @@
             ],
             "support": {
                 "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.3"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.4"
             },
-            "time": "2022-07-21T19:11:32+00:00"
+            "time": "2022-07-25T23:10:27+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -10239,11 +10239,11 @@
         },
         {
             "name": "twoavy/evaluation-tool",
-            "version": "1.0.425",
+            "version": "1.0.426",
             "dist": {
                 "type": "path",
                 "url": "./packages/twoavy/evaluation-tool",
-                "reference": "0a6a0e56a04aa8da9a71b57212516e14d5f516c2"
+                "reference": "e8501c196c0ca8341ed35998ac05e8df391fda90"
             },
             "require": {
                 "ankitpokhrel/tus-php": "^2.1",
