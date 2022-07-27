@@ -11,7 +11,7 @@ magic: ## perform all install actions
 	docker-compose build
 	docker-compose up -d
 	docker-compose exec k_evatool composer install
-	docker-compose exec k_evatool php artisan migrate
+	docker-compose exec k_evatool php artisan migrate:fresh --seed
 	docker-compose exec k_evatool php artisan passport:install
 	docker-compose exec k_evatool php artisan users:create-admin
 

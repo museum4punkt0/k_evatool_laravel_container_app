@@ -65,19 +65,19 @@ git -C ./packages/twoavy/evaluation-tool checkout master
 docker-compose build
 docker-compose up -d
 docker-compose exec k_evatool composer install
-docker-compose exec k_evatool php artisan migrate
+docker-compose exec k_evatool php artisan migrate:fresh --seed
 docker-compose exec k_evatool php artisan passport:install
 docker-compose exec k_evatool php artisan users:create-admin
 ```
 
 Alternatively you can use the Makefile and run "make magic"
 
-#### Migration
+#### Fresh migration (deletes all data)
 ```
 docker-compose exec k_evatool artisan migrate:fresh
 ```
 
-#### Migration with seed
+#### Fresh migration with seed (deletes all data and seeds sample data)
 ```
 docker-compose exec k_evatool artisan migrate:fresh --seed
 ```
