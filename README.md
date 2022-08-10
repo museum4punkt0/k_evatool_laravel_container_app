@@ -74,45 +74,45 @@ Alternatively you can use the Makefile and run "make magic"
 
 #### Fresh migration (deletes all data)
 ```
-docker-compose exec k_evatool artisan migrate:fresh
+docker-compose exec k_evatool php artisan migrate:fresh
 ```
 
 #### Fresh migration with seed (deletes all data and seeds sample data)
 ```
-docker-compose exec k_evatool artisan migrate:fresh --seed
+docker-compose exec k_evatool php artisan migrate:fresh --seed
 ```
 
 ### Run seeders
 #### Seed
 ```
-docker-compose exec k_evatool artisan db:seed
+docker-compose exec k_evatool php artisan db:seed
 ```
 #### Seed demo data
 ```
-docker-compose exec k_evatool artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder
+docker-compose exec k_evatool php artisan db:seed --class=Twoavy\\EvaluationTool\\Seeders\\EvaluationToolDemoDataSeeder
 ```
 #### Seed demo survey results
 ```
-docker-compose exec k_evatool artisan evaluation:seed_survey_results SURVEYID COUNT
+docker-compose exec k_evatool php artisan evaluation:seed_survey_results SURVEYID COUNT
 ```
 
 #### Passport installation
 ```
-docker-compose exec k_evatool artisan passport:install
+docker-compose exec k_evatool php artisan passport:install
 ```
 
 ### Tests
 #### Run all tests
 ```
-* run all tests: `docker-compose exec k_evatool artisan test`
+docker-compose exec k_evatool php artisan test
 ```
 #### Run all tests in class
 ```
-docker-compose exec k_evatool artisan test --filter "EvaluationToolSurveyTest"
+docker-compose exec k_evatool php artisan test --filter "EvaluationToolSurveyTest"
 ```
 #### Run only one specific method
 ```
-docker-compose exec k_evatool artisan test --filter "EvaluationToolSurveyTest::test_get_surveys"
+docker-compose exec k_evatool php artisan test --filter "EvaluationToolSurveyTest::test_get_surveys"
 ```
 
 ### License
