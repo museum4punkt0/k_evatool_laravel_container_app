@@ -17,7 +17,8 @@ The project museum4punkt0 is funded by the Federal Government Commissioner for C
 #### Backend (Laravel)
 - Ubuntu 20.04
 - Apache 2.4.x (nginx can be used as well)
-- PHP 8.0 (Several addition php packages are needed. Please see https://laravel.com/docs/8.x/deployment)
+- PHP 8.0 (Several addition php packages are needed. Please see https://laravel.com/docs/8.x/deployment. We additionally recommend installing the GMP
+  extension.)
 - MySQL 8.0
 - Composer 2.x
 
