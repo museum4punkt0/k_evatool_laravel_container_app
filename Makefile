@@ -6,7 +6,7 @@ magic: ## perform all install actions
 	cp .env.example .env
 	mkdir -p ./packages/twoavy/evaluation-tool
 	cd packages/twoavy
-	git clone https://github.com/museum4punkt0/k_evatool_laravel_package.git ./packages/twoavy/evaluation-tool
+	git clone https://github.com/museum4punkt0/k_evatool_laravel_container_app.git ./packages/twoavy/evaluation-tool
 	git -C ./packages/twoavy/evaluation-tool checkout main
 	docker-compose build
 	docker-compose up -d
